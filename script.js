@@ -296,11 +296,17 @@ inputRegisterBtn.addEventListener("click", function () {
   });
   closeBox();
   successRegisterBox.classList.remove("hidden");
+  successRegisterBox.innerHTML = "";
   successRegisterBox.insertAdjacentHTML(
     "afterbegin",
     displayCongrats(accounts.at(-1))
   );
   overlay.classList.remove("hidden");
+  inputRegisterName.value =
+    inputRegisterSName.value =
+    inputRegisterEmail.value =
+    inputRegisterPaswd.value =
+      "";
 });
 
 //Display books in table
