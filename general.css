@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Open Sans";
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--1-col {
+  grid-template-columns: 1fr;
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.primary-header {
+  font-size: 5.2rem;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: #343a40;
+  font-weight: 700;
+}
+
+.secondary-header {
+  font-size: 3.2rem;
+  color: #343a40;
+  margin-bottom: 2rem;
+  padding: 0 2.4rem;
+}
+
+.third-header {
+  color: #343a40;
+  font-size: 2rem;
+}
+
+.fourth-header {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-bottom: 1px solid #1971c2;
+}
+
+.btn:link,
+.btn:visited {
+  font-size: 1.6rem;
+  padding: 1.6rem 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 9px;
+  transition: all 0.3s;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}

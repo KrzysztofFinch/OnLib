@@ -1,0 +1,143 @@
+/* BELOW 1100px */
+@media (max-width: 69em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* BELOW 864px */
+@media (max-width: 54em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+/* BELOW 676px */
+@media (max-width: 43em) {
+  .hero-section {
+    margin-bottom: 20rem;
+  }
+
+  .hero-section .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    margin-bottom: 8.4rem;
+  }
+
+  .hero-img-box {
+    grid-row: 1;
+    width: 60%;
+    justify-self: center;
+    margin-bottom: 8rem;
+  }
+
+  .hero-text {
+    max-width: 70%;
+    justify-self: center;
+    margin-bottom: 9.6rem;
+    text-align: center;
+  }
+
+  .primary-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero-btns {
+    margin-top: 4rem;
+    margin: 0 auto;
+  }
+
+  .library-section .secondary-header {
+    max-width: 70%;
+  }
+
+  .library-section .grid--2-cols {
+    grid-template-columns: 1fr;
+    max-width: 70%;
+  }
+
+  .table-container {
+    margin-bottom: 3.2rem;
+  }
+
+  .form--select-genre {
+    grid-template-columns: 2fr 5fr 2fr !important;
+  }
+
+  .btn {
+    padding: 1rem 1.5rem;
+    width: 12rem;
+  }
+
+  .btn:link,
+  .btn:visited {
+    width: 14rem;
+  }
+}
+
+/* BELOW 560px */
+@media (max-width: 35em) {
+  html {
+    font-size: 40%;
+  }
+
+  .nav {
+    background-color: rgba(255, 255, 255, 0.904);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .nav {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link-nav:link,
+  .link-nav:visited {
+    color: #495057 !important;
+    border-bottom: 1px solid #495057;
+    font-size: 3.2rem;
+  }
+
+  .open-icon {
+    display: block;
+  }
+
+  .mobile--close-icon {
+    color: #495057;
+  }
+
+  .btn-overlay {
+    width: 25rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 27em) {
+  .library-section .grid--2-cols {
+    max-width: 100%;
+  }
+}

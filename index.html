@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnLib</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="media.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- MODAL LOGIN INPUT FIELDS -->
+    <div class="login--cart-box hidden">
+      <ion-icon name="close-outline" class="close-icon"></ion-icon>
+      <h2 class="header-logins">Log In</h2>
+      <form class="login-cart grid grid--2-cols">
+        <label class="label label-login" for="login">Login: </label>
+        <input type="text" id="login" class="input-login" required />
+
+        <label class="label label-password" for="passwd">Password: </label>
+        <input id="passwd" type="password" class="input-password" required />
+        <button class="login-button">Log In</button>
+      </form>
+    </div>
+    <!-- MODAL REGISTER INPUT FIELDS -->
+    <div class="register--cart-box hidden">
+      <ion-icon name="close-outline" class="close-icon"></ion-icon>
+      <h2 class="header-logins">OPEN ACCOUNT</h2>
+      <form class="register-cart grid grid--2-cols">
+        <label class="label label-login" for="registerName">Name: </label>
+        <input type="text" id="registerName" class="input-login" required />
+
+        <label class="label label-login" for="registerSName">Surname: </label>
+        <input type="text" id="registerSName" class="input-login" required />
+
+        <label class="label label-email" for="email">Email: </label>
+        <input type="email" id="email" class="input-login" required />
+
+        <label class="label label-password" for="passwdReg">Password: </label>
+        <input id="passwdReg" type="password" class="input-password" required />
+        <button class="register-button">Open Account</button>
+      </form>
+    </div>
+    <!-- Info about new login -->
+    <div class="info-login hidden"></div>
+    <div class="overlay hidden"></div>
+
+    <!-- HEADER SECTION -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-container" id="top">
+          <a href="#" class="logo-link link">
+            <ion-icon class="logo-img" name="library-outline"></ion-icon>
+            <span class="logo-name">OnLib</span>
+          </a>
+        </div>
+        <!-- header navigation -->
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav--list-item">
+              <a href="#" class="link link-nav">How It Works</a>
+            </li>
+            <li class="nav--list-item">
+              <a href="#books" class="link link-nav">Get Book</a>
+            </li>
+            <li class="nav--list-item">
+              <a href="#books" class="link link-nav">Add Book</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- login/register buttons -->
+        <div class="account-action">
+          <a href="#" class="btn-login link btn--nav-link">Log In</a>
+          <a href="#" class="btn-register link btn--nav-link">Open Account</a>
+          <ion-icon name="menu-outline" class="nav-icon open-icon"></ion-icon>
+          <ion-icon
+            name="close-outline"
+            class="nav-icon mobile--close-icon hidden"
+          ></ion-icon>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="grid grid--2-cols">
+          <div class="hero-text">
+            <h1 class="primary-header">
+              OnLib - Free Access to Thousands of Titles!!
+            </h1>
+            <p class="hero--paragraph">
+              With our online book library, you have access to a rich collection
+              of titles, you'll find something for yourself here! And all of
+              this is free and just a few clicks away. Browse, read, add and
+              develop your interests now!
+            </p>
+            <div class="hero-btns">
+              <a href="#library" class="btn btn-getBooks">Get Books &darr;</a>
+              <a href="#" class="btn btn-loginHero btn-register"
+                >Open Account</a
+              >
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="img/biblioteka-hero.webp"
+              alt="two images with photo of library
+            and man who is reading a book"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- LIBRARY SECTION -->
+    <section class="library-section" id="library">
+      <h2 class="secondary-header container" id="books">Books:</h2>
+      <div class="container grid grid--2-cols">
+        <!-- TABLE WITH BOOKS -->
+        <div class="table-container">
+          <!-- table -->
+          <div class="table">
+            <!-- table header -->
+            <div class="row row-header">
+              <span class="header--id-row">id</span>
+              <span class="header--title-row">title</span>
+              <span class="header--rating-row">rating</span>
+            </div>
+            <!-- table rows -->
+            <div class="rows"></div>
+          </div>
+        </div>
+        <!-- SELECTING, ADDING AND RENT BOOKS -->
+        <div class="grid grid--1-col books-action">
+          <div class="action-element select-container">
+            <h3 class="third-header">Select book genre</h3>
+            <form
+              action="#"
+              method="POST"
+              class="form--select-genre grid grid--2-cols"
+            >
+              <select
+                name="books"
+                id="book-selected"
+                class="select select-show"
+              >
+                <option value="all">all categories</option>
+                <option value="adventure">adventure</option>
+                <option value="classics">classics</option>
+                <option value="crime">crime</option>
+                <option value="fantasy">fantasy</option>
+                <option value="horror">horror</option>
+                <option value="humour and Satire">humour and satire</option>
+                <option value="war">war</option>
+              </select>
+              <button class="btn btn-show">Show books</button>
+              <label for="book-selected" class="label label-genre"
+                >Select genre</label
+              >
+            </form>
+          </div>
+          <div class="action-element add-container">
+            <h3 class="third-header">Add book to library</h3>
+            <form class="form--add-book grid">
+              <select
+                name="books"
+                id="book--selected-add"
+                class="select select-add"
+              >
+                <option value="adventure">adventure</option>
+                <option value="clasics">classics</option>
+                <option value="crime">crime</option>
+                <option value="fantasy">fantasy</option>
+                <option value="horror">horror</option>
+                <option value="humourSatire">humour and satire</option>
+                <option value="war">war</option>
+              </select>
+              <input
+                type="text"
+                maxlength="30"
+                id="input-title"
+                placeholder="title"
+                class="input--book-title"
+                required
+              />
+              <button class="btn btn-add">Add book</button>
+              <label for="book--selected-add" class="label label--select-genre"
+                >Select genre</label
+              >
+              <label for="input-title" class="label label--select-genre"
+                >Input title</label
+              >
+            </form>
+            <div class="overlay overlay-actions"></div>
+            <div class="overlay-login">
+              <p class="btn-overlay btn-login">LOG IN FOR ACCESS</p>
+            </div>
+          </div>
+          <div class="action-element rent-container">
+            <h3 class="third-header">Rent a book</h3>
+            <p class="text">
+              To rent a book, please click on this book in the tabel and click
+              the button 'rent book'
+            </p>
+            <input type="button" class="btn btn--rent-book" value="Rent book" />
+            <div class="overlay overlay-actions"></div>
+            <div class="overlay-login">
+              <p class="btn-overlay btn-login">LOG IN FOR ACCESS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container grid grid--3-cols">
+        <div class="footer-col footer-socials">
+          <div>
+            <h4 class="fourth-header header-socials">Our socials:</h4>
+            <span class="socials"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></span>
+            <span class="socials">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </span>
+            <span class="socials">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </span>
+          </div>
+        </div>
+        <div class="footer-col footer-company">
+          <div>
+            <h4 class="fourth-header">Navigation:</h4>
+            <ul class="footer-list">
+              <li class="footer--list-item">
+                <a href="#" class="link-footer">About Us</a>
+              </li>
+              <li class="footer--list-item">
+                <a href="#" class="link-footer">Carrier</a>
+              </li>
+              <li class="footer--list-item">
+                <a href="#" class="link-footer">Log In</a>
+              </li>
+              <li class="footer--list-item">
+                <a href="#" class="link-footer">Open Account</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col footer-back">
+          <h4 class="fourth-header">
+            <a href="#" class="go-top go--top-box">TOP &uarr;</a>
+          </h4>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
