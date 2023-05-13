@@ -23,8 +23,6 @@ const openMobileNav = document.querySelector(".open-icon");
 const closeMobileNav = document.querySelector(".mobile--close-icon");
 const header = document.querySelector(".header");
 
-console.log(closeMobileNav);
-
 const showBooksBtn = document.querySelector(".btn-show");
 const selectGenre = document.querySelector(".select-show");
 const tableRows = document.querySelector(".rows");
@@ -33,11 +31,14 @@ const addBookBtn = document.querySelector(".btn-add");
 const inputBookTitle = document.querySelector(".input--book-title");
 const selectGen = document.querySelector(".select-add");
 
+//alert
+alert(`🔴WARNING!🔴\nThis website is fake website. We don\'t offer any free book
+ and you can\'t get any book here. This site only demostrate my skills in HTML, CSS and JAVASCRIPT`);
+
 //Accounts
 const account1 = {
   name: "Krzysztof",
   surname: "Zieba",
-  email: "dr@gmail.com",
   username: "kz",
   password: 1111,
 };
