@@ -17,7 +17,7 @@ const inputLoginBtn = document.querySelector(".login-button");
 const inputRegisterBtn = document.querySelector(".register-button");
 const inputRegisterName = document.querySelector("#registerName");
 const inputRegisterSName = document.querySelector("#registerSName");
-const inputRegisterEmail = document.querySelector("#email");
+const inputRegisterEmail = document.querySelector("#username");
 const inputRegisterPaswd = document.querySelector("#passwdReg");
 const openMobileNav = document.querySelector(".open-icon");
 const closeMobileNav = document.querySelector(".mobile--close-icon");
@@ -286,11 +286,10 @@ inputRegisterBtn.addEventListener("click", function () {
   const usern = inputRegisterName.value
     .toUpperCase()
     .at(0)
-    .concat("", inputRegisterSName.value.toUpperCase().at(0));
+    .concat("", inputRegisterEmail.value.toUpperCase().at(0));
 
   accounts.push({
     name: inputRegisterName.value,
-    surname: inputRegisterSName.value,
     email: inputRegisterEmail.value,
     username: usern,
     password: Number(inputRegisterPaswd.value),
