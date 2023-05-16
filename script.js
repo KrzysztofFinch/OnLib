@@ -233,6 +233,9 @@ const openCloseMobile = function () {
   openMobileNav.classList.toggle("hidden");
 };
 
+//print first time all books in table
+tableRows.insertAdjacentHTML("afterbegin", displayBooks(books, "all"));
+
 //Add listener for close login and register cart box
 //click
 for (const close of closeCartBox) {
